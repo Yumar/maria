@@ -1,0 +1,18 @@
+# Build output
+backend/bin/
+
+# Env files
+.env
+.env.*
+!.env.example
+
+# Test / coverage
+*.out
+coverage.*
+*.test
+
+# OS / IDE
+.DS_Store
+.idea/
+.vscode/
+*.swp
