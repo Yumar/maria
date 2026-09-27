@@ -21,10 +21,12 @@ const (
 
 // Config holds all runtime configuration.
 type Config struct {
-	AppEnv    string
-	HTTPAddr  string
-	LogLevel  slog.Level
-	LogFormat string
+	AppEnv         string
+	HTTPAddr       string
+	LogLevel       slog.Level
+	LogFormat      string
+	DatabaseURL    string
+	MigrateOnStart bool
 }
 
 // Load reads configuration from the environment, applying defaults and validating values.
@@ -53,7 +55,37 @@ func Load() (Config, error) {
 		return Config{}, fmt.Errorf("config: invalid LOG_FORMAT %q (want %q or %q)", cfg.LogFormat, LogFormatJSON, LogFormatText)
 	}
 
+	databaseURL, ok := os.LookupEnv("DATABASE_URL")
+	if !ok || databaseURL == "" {
+		return Config{}, fmt.Errorf("config: DATABASE_URL is required")
+	}
+	cfg.DatabaseURL = databaseURL
+
+	migrateOnStart, err := parseBool(getenv("MIGRATE_ON_START", defaultMigrateOnStart(cfg.AppEnv)))
+	if err != nil {
+		return Config{}, err
+	}
+	cfg.MigrateOnStart = migrateOnStart
+
 	return cfg, nil
+}
+
+func defaultMigrateOnStart(appEnv string) string {
+	if appEnv == EnvProduction {
+		return "false"
+	}
+	return "true"
+}
+
+func parseBool(s string) (bool, error) {
+	switch s {
+	case "true":
+		return true, nil
+	case "false":
+		return false, nil
+	default:
+		return false, fmt.Errorf("config: invalid MIGRATE_ON_START %q (want %q or %q)", s, "true", "false")
+	}
 }
 
 func parseLogLevel(s string) (slog.Level, error) {

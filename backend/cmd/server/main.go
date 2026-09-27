@@ -13,6 +13,7 @@ import (
 	"time"
 
 	"github.com/yumarxpolanco/maria/backend/internal/config"
+	"github.com/yumarxpolanco/maria/backend/internal/db"
 	"github.com/yumarxpolanco/maria/backend/internal/httpapi"
 )
 
@@ -35,6 +36,20 @@ func run() error {
 
 	ctx, stop := signal.NotifyContext(context.Background(), os.Interrupt, syscall.SIGTERM)
 	defer stop()
+
+	pool, err := db.Open(ctx, cfg.DatabaseURL)
+	if err != nil {
+		return err
+	}
+	defer pool.Close()
+
+	if cfg.MigrateOnStart {
+		logger.Info("running migrations")
+		if err := db.Migrate(ctx, pool); err != nil {
+			return err
+		}
+		logger.Info("migrations applied")
+	}
 
 	srv := &http.Server{
 		Addr:              cfg.HTTPAddr,

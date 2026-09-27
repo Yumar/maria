@@ -56,8 +56,10 @@ Run from the repo root (the Makefile delegates to `backend/`). Requires Go (≥ 
 - `make run` — run the server locally (config via env vars; see `.env.example`)
 - `make fmt` / `make lint` — format / lint (golangci-lint)
 - `make test` — unit tests, no Docker
-- `make test-integration` — integration tests with testcontainers (from T-002)
-- `make generate` / `make check-generated` — codegen and drift check (from T-002)
+- `make test-integration` — integration tests with testcontainers (starts a `postgres:17-alpine` container per package test binary)
+- `make generate` / `make check-generated` — sqlc codegen and drift check
 - `make db-up` / `make db-down` — local Postgres 17 via Docker Compose
+- `make migrate-up` / `make migrate-down` / `make migrate-status` — apply/roll back/inspect goose migrations against `DATABASE_URL`
+- `make migrate-new name=add_foo` — create a new sequential goose migration file
 - `make help` — list all targets
 _E2E and eval commands: TBD (Weeks 3–4)._
