@@ -1,6 +1,7 @@
 # T-007: Goals CRUD vertical slice (reference pattern)
 
 - **Story**: S-003
+- **Issue**: [#12](https://github.com/Yumar/maria/issues/12)
 - **FR/NFR**: FR-1, FR-13
 - **Complexity**: senior
 - **Depends on**: T-005, T-006

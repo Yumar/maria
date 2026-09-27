@@ -23,7 +23,13 @@ Highest-risk work (OAuth 2.1, Postgres advisory-lock scheduler, LLM prompt build
 3. **Dispatch** — run implementers in parallel only when their task file lists do not overlap (watch shared files: migrations, sqlc output, OpenAPI spec, routers).
 4. **Review** — `reviewer` on every task. CHANGES REQUESTED goes back to the same agent (resume it) with the findings.
 5. **QA** — `qa` verifies the story's FR IDs and adds higher-level tests.
-6. **Commit** — Tech Lead commits per task or story, referencing task/FR IDs.
+6. **Commit** — Tech Lead commits per task or story, referencing task/FR IDs, and adding `Closes #N` (task issue) in the commit message when pushing.
+
+### GitHub tracking
+- Repo: https://github.com/Yumar/maria · Board: https://github.com/users/Yumar/projects/3 (fields: Status, Complexity).
+- Each story is an issue labelled `story`, with its tasks as sub-issues labelled `task` + `complexity:*` + FR/NFR labels, grouped under a milestone per week.
+- The markdown files in `docs/` are the source of truth for agents. Issues hold the status plus a link to the file, and each file links back via its `Issue` field.
+- Status updates: set the task's board Status to In Progress when dispatching it. Close the issue (which moves it to Done) when it's committed. When planning a new milestone, create its issues the same way and fill in each file's `Issue` field.
 
 ### Task sizing
 One task = one sitting: roughly 1–5 files, explicit file list, a reference example when one exists, testable acceptance criteria, and the exact test command.

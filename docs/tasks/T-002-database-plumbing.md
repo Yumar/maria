@@ -1,6 +1,7 @@
 # T-002: Database plumbing: pgx pool, goose, sqlc, testcontainers helper
 
 - **Story**: S-001
+- **Issue**: [#6](https://github.com/Yumar/maria/issues/6)
 - **FR/NFR**: NFR-3 (groundwork)
 - **Complexity**: senior
 - **Depends on**: T-001

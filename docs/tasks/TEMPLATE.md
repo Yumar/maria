@@ -1,6 +1,7 @@
 # T-XXX: <task title>
 
 - **Story**: S-XXX
+- **Issue**: [#N](https://github.com/Yumar/maria/issues/N)
 - **FR/NFR**: <e.g. FR-2>
 - **Complexity**: lead | senior | implementer
 - **Depends on**: <T-XXX or —>

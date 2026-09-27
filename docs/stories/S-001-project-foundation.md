@@ -2,7 +2,8 @@
 
 - **Milestone**: Week 1 — Core
 - **FR/NFR**: NFR-3 (groundwork), NFR-6
-- **Status**: todo
+- **Status**: in progress
+- **Issue**: [#1](https://github.com/Yumar/maria/issues/1)
 
 ## Story
 As the developer of PM Agent, I want a runnable Go backend with Postgres, migrations, code generation, lint, tests and CI, so that every later feature ships on a consistent, verified base.

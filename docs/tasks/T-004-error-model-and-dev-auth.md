@@ -1,6 +1,7 @@
 # T-004: Error model and dev auth stub
 
 - **Story**: S-003
+- **Issue**: [#9](https://github.com/Yumar/maria/issues/9)
 - **FR/NFR**: FR-1 (groundwork), NFR-1
 - **Complexity**: implementer
 - **Depends on**: T-002

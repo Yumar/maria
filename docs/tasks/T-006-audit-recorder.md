@@ -1,6 +1,7 @@
 # T-006: Audit recorder (AgentAction)
 
 - **Story**: S-003
+- **Issue**: [#11](https://github.com/Yumar/maria/issues/11)
 - **FR/NFR**: FR-13, FR-14 (groundwork)
 - **Complexity**: senior
 - **Depends on**: T-003

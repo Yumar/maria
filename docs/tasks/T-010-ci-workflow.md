@@ -1,6 +1,7 @@
 # T-010: CI workflow (GitHub Actions)
 
 - **Story**: S-001
+- **Issue**: [#7](https://github.com/Yumar/maria/issues/7)
 - **FR/NFR**: — (spec: "CI: GitHub Actions: lint, tests, evals, deploy")
 - **Complexity**: implementer
 - **Depends on**: T-005 (all `make` targets exist). Can run in parallel with T-006–T-009 because it touches only `.github/`.

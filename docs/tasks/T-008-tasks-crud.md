@@ -1,6 +1,7 @@
 # T-008: Tasks CRUD (copy the goals pattern)
 
 - **Story**: S-004
+- **Issue**: [#13](https://github.com/Yumar/maria/issues/13)
 - **FR/NFR**: FR-2, FR-13
 - **Complexity**: implementer
 - **Depends on**: T-007

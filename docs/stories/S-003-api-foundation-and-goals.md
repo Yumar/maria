@@ -3,6 +3,7 @@
 - **Milestone**: Week 1 — Core
 - **FR/NFR**: FR-1, FR-13 (audit recording), NFR-4
 - **Status**: todo
+- **Issue**: [#3](https://github.com/Yumar/maria/issues/3)
 
 ## Story
 As the PM Agent user, I want to create, view, edit, pause, complete and drop goals through a documented REST API, so that my goals live in one place that the web app and (in Week 2) MCP clients can share.

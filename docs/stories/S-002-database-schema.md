@@ -3,6 +3,7 @@
 - **Milestone**: Week 1 — Core
 - **FR/NFR**: FR-1, FR-2, FR-13 (groundwork), NFR-1 (groundwork)
 - **Status**: todo
+- **Issue**: [#2](https://github.com/Yumar/maria/issues/2)
 
 ## Story
 As the developer of PM Agent, I want the full v1 schema (users, settings, goals, tasks, check-ins, reviews, agent actions) created upfront, so that Weeks 2–4 build features without competing migrations and every record is scoped to a user from day one.

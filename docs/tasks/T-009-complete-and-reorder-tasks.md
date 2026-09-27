@@ -1,6 +1,7 @@
 # T-009: Complete and reorder tasks
 
 - **Story**: S-004
+- **Issue**: [#14](https://github.com/Yumar/maria/issues/14)
 - **FR/NFR**: FR-2, FR-13
 - **Complexity**: implementer
 - **Depends on**: T-008

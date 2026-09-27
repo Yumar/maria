@@ -1,6 +1,7 @@
 # T-001: Scaffold Go backend and dev tooling
 
 - **Story**: S-001
+- **Issue**: [#5](https://github.com/Yumar/maria/issues/5)
 - **FR/NFR**: NFR-6
 - **Complexity**: senior
 - **Depends on**: —

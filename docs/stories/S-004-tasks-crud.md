@@ -3,6 +3,7 @@
 - **Milestone**: Week 1 — Core
 - **FR/NFR**: FR-2, FR-13 (audit recording)
 - **Status**: todo
+- **Issue**: [#4](https://github.com/Yumar/maria/issues/4)
 
 ## Story
 As the PM Agent user, I want to create, edit, reorder and complete tasks, optionally linked to a goal, so that each goal turns into concrete next actions I can track.

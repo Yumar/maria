@@ -3,6 +3,7 @@
 - **Milestone**: <Week N — name>
 - **FR/NFR**: <e.g. FR-1, FR-13, NFR-3>
 - **Status**: todo | in progress | review | done
+- **Issue**: [#N](https://github.com/Yumar/maria/issues/N)
 
 ## Story
 As <user>, I want <capability> so that <outcome>.

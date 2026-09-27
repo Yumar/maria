@@ -1,6 +1,7 @@
 # T-003: v1 domain schema migration
 
 - **Story**: S-002
+- **Issue**: [#8](https://github.com/Yumar/maria/issues/8)
 - **FR/NFR**: FR-1, FR-2, FR-13, NFR-1
 - **Complexity**: senior
 - **Depends on**: T-002

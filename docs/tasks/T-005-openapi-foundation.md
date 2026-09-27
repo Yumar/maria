@@ -1,6 +1,7 @@
 # T-005: OpenAPI foundation, codegen and router wiring
 
 - **Story**: S-003
+- **Issue**: [#10](https://github.com/Yumar/maria/issues/10)
 - **FR/NFR**: FR-1 (groundwork), NFR-4
 - **Complexity**: senior
 - **Depends on**: T-004
