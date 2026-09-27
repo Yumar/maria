@@ -46,7 +46,7 @@ One task = one sitting: roughly 1–5 files, explicit file list, a reference exa
 
 ## Repository layout
 - `api/` — OpenAPI 3.1 contract (`openapi.yaml`), source of truth for server and client codegen.
-- `backend/` — Go module `github.com/yumarxpolanco/maria/backend` (`cmd/server`, `internal/...`).
+- `backend/` — Go module `github.com/Yumar/maria/backend` (`cmd/server`, `internal/...`).
 - `web/` — Angular PWA (planned, Week 4).
 - `docs/stories/`, `docs/tasks/` — planning.
 
@@ -63,3 +63,7 @@ Run from the repo root (the Makefile delegates to `backend/`). Requires Go (≥ 
 - `make migrate-new name=add_foo` — create a new sequential goose migration file
 - `make help` — list all targets
 _E2E and eval commands: TBD (Weeks 3–4)._
+
+**Colima + testcontainers**: `make test-integration` needs
+`DOCKER_HOST=unix://$HOME/.colima/default/docker.sock` and
+`TESTCONTAINERS_DOCKER_SOCKET_OVERRIDE=/var/run/docker.sock` exported (otherwise: "rootless Docker not found").

@@ -1,4 +1,4 @@
-module github.com/yumarxpolanco/maria/backend
+module github.com/Yumar/maria/backend
 
 go 1.27.1
 

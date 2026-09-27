@@ -28,6 +28,6 @@ formatters:
   settings:
     goimports:
       local-prefixes:
-        - github.com/yumarxpolanco/maria
+        - github.com/Yumar/maria
   exclusions:
     generated: strict

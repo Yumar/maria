@@ -9,8 +9,8 @@ import (
 	"github.com/jackc/pgx/v5/stdlib"
 	"github.com/pressly/goose/v3"
 
-	"github.com/yumarxpolanco/maria/backend/internal/db/migrations"
-	"github.com/yumarxpolanco/maria/backend/internal/db/sqlc"
+	"github.com/Yumar/maria/backend/internal/db/migrations"
+	"github.com/Yumar/maria/backend/internal/db/sqlc"
 )
 
 // Open creates a pgx connection pool for databaseURL and verifies connectivity.

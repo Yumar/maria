@@ -12,9 +12,9 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/yumarxpolanco/maria/backend/internal/config"
-	"github.com/yumarxpolanco/maria/backend/internal/db"
-	"github.com/yumarxpolanco/maria/backend/internal/httpapi"
+	"github.com/Yumar/maria/backend/internal/config"
+	"github.com/Yumar/maria/backend/internal/db"
+	"github.com/Yumar/maria/backend/internal/httpapi"
 )
 
 const shutdownTimeout = 10 * time.Second

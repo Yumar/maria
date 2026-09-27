@@ -24,7 +24,7 @@ As the developer of PM Agent, I want a runnable Go backend with Postgres, migrat
 | T-010 | CI workflow (GitHub Actions) | implementer | T-005 |
 
 ## Notes
-- **Repo layout** (monorepo): `api/openapi.yaml` (contract shared with the Angular client in Week 4), `backend/` (Go module `github.com/yumarxpolanco/maria/backend`), `web/` (Week 4). Root `Makefile` delegates to `backend/`.
+- **Repo layout** (monorepo): `api/openapi.yaml` (contract shared with the Angular client in Week 4), `backend/` (Go module `github.com/Yumar/maria/backend`), `web/` (Week 4). Root `Makefile` delegates to `backend/`.
 - **Go version**: latest stable (≥ 1.26). oapi-codegen v2.8+ needs a recent toolchain.
 - **Code generators** are pinned as Go tools (`go get -tool`) and run with `go tool sqlc`, `go tool oapi-codegen` and `go tool goose`. golangci-lint is installed as a binary (its recommended install method), not as a Go tool.
 - **Test split**: `make test` runs unit tests only. DB-backed tests use the `//go:build integration` tag and run with `make test-integration`.

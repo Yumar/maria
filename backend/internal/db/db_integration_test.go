@@ -11,10 +11,10 @@ import (
 	"github.com/jackc/pgx/v5/stdlib"
 	"github.com/pressly/goose/v3"
 
-	"github.com/yumarxpolanco/maria/backend/internal/db"
-	"github.com/yumarxpolanco/maria/backend/internal/db/migrations"
-	"github.com/yumarxpolanco/maria/backend/internal/db/sqlc"
-	"github.com/yumarxpolanco/maria/backend/internal/testutil"
+	"github.com/Yumar/maria/backend/internal/db"
+	"github.com/Yumar/maria/backend/internal/db/migrations"
+	"github.com/Yumar/maria/backend/internal/db/sqlc"
+	"github.com/Yumar/maria/backend/internal/testutil"
 )
 
 func TestMigrate_UpDownUp(t *testing.T) {

@@ -10,13 +10,13 @@
 Create the Go module, an HTTP server with a health check, structured logging, graceful shutdown, local Postgres via Docker Compose, lint config and a Makefile. This is the skeleton every later task plugs into.
 
 ## Files to touch
-- `backend/go.mod` — create: module `github.com/yumarxpolanco/maria/backend`, latest stable Go (≥ 1.26). Dependency: `github.com/go-chi/chi/v5`.
+- `backend/go.mod` — create: module `github.com/Yumar/maria/backend`, latest stable Go (≥ 1.26). Dependency: `github.com/go-chi/chi/v5`.
 - `backend/cmd/server/main.go` — create: load config → build `slog` logger (JSON; text when `APP_ENV=development` and `LOG_FORMAT=text`) → build router → `http.Server` with read/write/idle timeouts → graceful shutdown on SIGINT/SIGTERM (10 s).
 - `backend/internal/config/config.go` — create: `Config` struct and `Load() (Config, error)` using only stdlib `os.Getenv` with defaults. Vars: `APP_ENV` (`development`|`production`, default `development`), `HTTP_ADDR` (default `:8080`), `LOG_LEVEL` (`debug|info|warn|error`, default `info`), `LOG_FORMAT` (`json|text`, default `json`). Return an error for invalid values.
 - `backend/internal/config/config_test.go` — create: table-driven tests for defaults, overrides and invalid values (use `t.Setenv`).
 - `backend/internal/httpapi/router.go` — create: `NewRouter(logger *slog.Logger) http.Handler` with chi middleware `RequestID`, `Recoverer` (`RealIP` was dropped: deprecated in chi v5.3 because it allows IP spoofing), a request-logging middleware (method, path, status, duration_ms, request_id; **never** bodies or headers), and `GET /healthz` → `200 {"status":"ok"}`.
 - `backend/internal/httpapi/router_test.go` — create: `httptest` test for `/healthz`, and for 404 on unknown routes.
-- `backend/.golangci.yml` — create: golangci-lint v2 config. Linters: defaults + `gosec`, `bodyclose`, `errorlint`, `gocritic`, `misspell`, `revive`. Formatters: `gofmt`, `goimports` (local prefix `github.com/yumarxpolanco/maria`). Exclude generated files.
+- `backend/.golangci.yml` — create: golangci-lint v2 config. Linters: defaults + `gosec`, `bodyclose`, `errorlint`, `gocritic`, `misspell`, `revive`. Formatters: `gofmt`, `goimports` (local prefix `github.com/Yumar/maria`). Exclude generated files.
 - `Makefile` — create (repo root; each target `cd backend`): `help`, `build` (→ `backend/bin/server`), `run`, `fmt`, `lint`, `test` (`go test -race ./...`), `db-up`, `db-down` (docker compose). Placeholder targets `generate`, `check-generated` and `test-integration` that exit 0 with "not configured yet".
 - `docker-compose.yml` — create: `postgres:17-alpine`, db/user/password `maria`, port `5432`, named volume, `pg_isready` healthcheck.
 - `.env.example` — create: every config var with its default, with comments.

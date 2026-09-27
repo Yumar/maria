@@ -13,8 +13,8 @@ import (
 	"github.com/jackc/pgx/v5/pgxpool"
 	"github.com/testcontainers/testcontainers-go/modules/postgres"
 
-	"github.com/yumarxpolanco/maria/backend/internal/db"
-	"github.com/yumarxpolanco/maria/backend/internal/db/sqlc"
+	"github.com/Yumar/maria/backend/internal/db"
+	"github.com/Yumar/maria/backend/internal/db/sqlc"
 )
 
 var (
